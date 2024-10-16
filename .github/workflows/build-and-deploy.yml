@@ -9,6 +9,6 @@ on:
       - main
 
 jobs:
-    build-linux:
-        name: Build Flutter Android SDK Docker Image
-        uses: ./.github/images/flutter-android-sdk.yml
+  build-linux:
+    name: Build Flutter Android SDK Docker Image
+    uses: ./.github/workflows/flutter-android-sdk.yml
