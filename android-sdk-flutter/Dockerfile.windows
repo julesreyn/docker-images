@@ -1,0 +1,44 @@
+FROM mcr.microsoft.com/openjdk/jdk:21-windows-lts
+
+LABEL maintainer="Jules Reynaud <jules.reynaud@epitech.eu>"
+LABEL description="Docker image with Flutter and Android SDK for Windows architecture"
+
+SHELL ["cmd", "/S", "/C"]
+
+RUN powershell -Command \
+    Invoke-WebRequest -Uri https://dl.google.com/android/repository/commandlinetools-win-10406996_latest.zip -OutFile sdk-tools.zip; \
+    Expand-Archive sdk-tools.zip -DestinationPath C:\android-sdk; \
+    Remove-Item sdk-tools.zip
+
+ENV ANDROID_SDK_ROOT="C:\\android-sdk"
+ENV FLUTTER_HOME="C:\\flutter"
+ENV PATH="%PATH%;C:\\android-sdk\\platform-tools;C:\\android-sdk\\cmdline-tools\\latest\\bin;C:\\flutter\\bin"
+
+RUN powershell -Command \
+    Invoke-WebRequest -Uri https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.24.3-stable.zip -OutFile flutter.zip; \
+    Expand-Archive flutter.zip -DestinationPath C:\\; \
+    Remove-Item flutter.zip
+
+RUN cmd /c "yes | C:\\android-sdk\\cmdline-tools\\latest\\bin\\sdkmanager.bat --licenses"
+
+RUN C:\\android-sdk\\cmdline-tools\\latest\\bin\\sdkmanager.bat --install \
+    "platform-tools" \
+    "platforms;android-33" \
+    "build-tools;34.0.0" \
+    "emulator" \
+    "tools"
+
+RUN net user builder /add && \
+    mkdir C:\Users\builder\app && \
+    icacls C:\Users\builder\app /grant builder:F /T
+
+USER builder
+
+WORKDIR C:\\Users\\builder\\app
+
+RUN flutter config --no-analytics && \
+    flutter doctor --android-licenses && \
+    flutter doctor -v && \
+    flutter config --no-enable-web
+
+CMD ["cmd.exe"]
