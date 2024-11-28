@@ -1,4 +1,4 @@
-FROM openjdk:17-jdk-slim
+FROM openjdk:24-jdk-slim
 
 LABEL maintainer="Jules Reynaud <jules.reynaud@epitech.eu>"
 LABEL description="Docker image with JDK 24, Android SDK 33, Flutter 3.24.3 for building Flutter apps"
