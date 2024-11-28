@@ -87,6 +87,14 @@ The following table shows available image versions. The `latest` tag points to t
 | jdk24-android33-flutter3.24.3-linux-x64 | OpenJDK 24 | 3.24.3 | 34.0.0 | linux-x64 | ~2.3GB |
 | jdk24-android33-flutter3.24.3-darwin-x64 | OpenJDK 24 | 3.24.3 | 34.0.0 | darwin-x64 | ~2.3GB |
 | jdk24-android33-flutter3.24.3-windows-x64 | OpenJDK 24 | 3.24.3 | 34.0.0 | windows-x64 | ~2.4GB |
+| jdk17-android33-flutter3.24.3 | OpenJDK 17 | 3.24.3 | 34.0.0 | None | ~2.1GB |
+| jdk17-android33-flutter3.24.3-full | OpenJDK 17 | 3.24.3 | 34.0.0 | All platforms | ~4.8GB |
+| jdk17-android33-flutter3.24.3-android-arm | OpenJDK 17 | 3.24.3 | 34.0.0 | android-arm | ~2.3GB |
+| jdk17-android33-flutter3.24.3-android-arm64 | OpenJDK 17 | 3.24.3 | 34.0.0 | android-arm64 | ~2.4GB |
+| jdk17-android33-flutter3.24.3-android-x64 | OpenJDK 17 | 3.24.3 | 34.0.0 | android-x64 | ~2.3GB |
+| jdk17-android33-flutter3.24.3-linux-x64 | OpenJDK 17 | 3.24.3 | 34.0.0 | linux-x64 | ~2.3GB |
+| jdk17-android33-flutter3.24.3-darwin-x64 | OpenJDK 17 | 3.24.3 | 34.0.0 | darwin-x64 | ~2.3GB |
+| jdk17-android33-flutter3.24.3-windows-x64 | OpenJDK 17 | 3.24.3 | 34.0.0 | windows-x64 | ~2.4GB |
 
 All images share the same base configuration but differ in included platform-specific artifacts:
 - Base image (latest): Minimal setup with no platform artifacts
