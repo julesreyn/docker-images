@@ -1,7 +1,8 @@
+
 FROM openjdk:17-jdk-slim
 
 LABEL maintainer="Jules Reynaud <jules.reynaud@epitech.eu>"
-LABEL description="Docker image with JDK 24, Android SDK 33, Flutter 3.24.3 for building Flutter apps"
+LABEL description="Docker image with Flutter and Android SDK for building Flutter apps"
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
@@ -49,9 +50,9 @@ RUN flutter config --no-analytics && \
     flutter doctor -v && \
     flutter config --no-enable-web
 
-RUN rm -rf $FLUTTER_HOME/.pub-cache/_temp && \
+    RUN rm -rf $FLUTTER_HOME/.pub-cache/_temp && \
     rm -rf $FLUTTER_HOME/bin/cache/artifacts/engine/android-arm && \
-    rm -rf $FLUTTER_HOME/bin/cache/artifacts/engine/android-arm64 && \
+    # rm -rf $FLUTTER_HOME/bin/cache/artifacts/engine/android-arm64 && \
     rm -rf $FLUTTER_HOME/bin/cache/artifacts/engine/android-x64 && \
     rm -rf $FLUTTER_HOME/bin/cache/artifacts/engine/darwin-x64 && \
     rm -rf $FLUTTER_HOME/bin/cache/artifacts/engine/linux-x64/*clang* && \
