@@ -69,32 +69,28 @@ To keep the image as lightweight as possible, several unused Flutter engine arti
 - Arm architectures (`android-arm`, `android-arm64`, etc.)
 - Other platforms' engine artifacts (`darwin-x64`, `windows-x64`, etc.)
 
-## License
-
-This Docker image is maintained by **Jules Reynaud**. For any issues or contributions, feel free to reach out here : docker-hub-android-s.handled958@passmail.net.
-
 ## Docker Images
 
 The following table shows available image versions. The `latest` tag points to the minimal base image.
 
 | Docker Tag | JDK Version | Flutter Version | Android SDK | Artifacts Included | Image Size |
 |------------|-------------|-----------------|-------------|-------------------|------------|
-| jdk24-android33-flutter3.24.3 (latest) | OpenJDK 24 | 3.24.3 | 34.0.0 | None | ~2.1GB |
-| jdk24-android33-flutter3.24.3-full | OpenJDK 24 | 3.24.3 | 34.0.0 | All platforms | ~4.8GB |
-| jdk24-android33-flutter3.24.3-android-arm | OpenJDK 24 | 3.24.3 | 34.0.0 | android-arm | ~2.3GB |
-| jdk24-android33-flutter3.24.3-android-arm64 | OpenJDK 24 | 3.24.3 | 34.0.0 | android-arm64 | ~2.4GB |
-| jdk24-android33-flutter3.24.3-android-x64 | OpenJDK 24 | 3.24.3 | 34.0.0 | android-x64 | ~2.3GB |
-| jdk24-android33-flutter3.24.3-linux-x64 | OpenJDK 24 | 3.24.3 | 34.0.0 | linux-x64 | ~2.3GB |
-| jdk24-android33-flutter3.24.3-darwin-x64 | OpenJDK 24 | 3.24.3 | 34.0.0 | darwin-x64 | ~2.3GB |
-| jdk24-android33-flutter3.24.3-windows-x64 | OpenJDK 24 | 3.24.3 | 34.0.0 | windows-x64 | ~2.4GB |
-| jdk17-android33-flutter3.24.3 | OpenJDK 17 | 3.24.3 | 34.0.0 | None | ~2.1GB |
-| jdk17-android33-flutter3.24.3-full | OpenJDK 17 | 3.24.3 | 34.0.0 | All platforms | ~4.8GB |
-| jdk17-android33-flutter3.24.3-android-arm | OpenJDK 17 | 3.24.3 | 34.0.0 | android-arm | ~2.3GB |
-| jdk17-android33-flutter3.24.3-android-arm64 | OpenJDK 17 | 3.24.3 | 34.0.0 | android-arm64 | ~2.4GB |
-| jdk17-android33-flutter3.24.3-android-x64 | OpenJDK 17 | 3.24.3 | 34.0.0 | android-x64 | ~2.3GB |
-| jdk17-android33-flutter3.24.3-linux-x64 | OpenJDK 17 | 3.24.3 | 34.0.0 | linux-x64 | ~2.3GB |
-| jdk17-android33-flutter3.24.3-darwin-x64 | OpenJDK 17 | 3.24.3 | 34.0.0 | darwin-x64 | ~2.3GB |
-| jdk17-android33-flutter3.24.3-windows-x64 | OpenJDK 17 | 3.24.3 | 34.0.0 | windows-x64 | ~2.4GB |
+| jdk24-android33-flutter3.24.3 (latest) | OpenJDK 24 | 3.24.3 | 34.0.0 | None | 2.56GB |
+| jdk24-android33-flutter3.24.3-full | OpenJDK 24 | 3.24.3 | 34.0.0 | All platforms | 2.56GB |
+| jdk24-android33-flutter3.24.3-android-arm | OpenJDK 24 | 3.24.3 | 34.0.0 | android-arm | 2.56GB |
+| jdk24-android33-flutter3.24.3-android-arm64 | OpenJDK 24 | 3.24.3 | 34.0.0 | android-arm64 | 2.56GB |
+| jdk24-android33-flutter3.24.3-android-x64 | OpenJDK 24 | 3.24.3 | 34.0.0 | android-x64 | 2.56GB |
+| jdk24-android33-flutter3.24.3-linux-x64 | OpenJDK 24 | 3.24.3 | 34.0.0 | linux-x64 | 2.56GB |
+| jdk24-android33-flutter3.24.3-darwin-x64 | OpenJDK 24 | 3.24.3 | 34.0.0 | darwin-x64 | 2.56GB |
+| jdk24-android33-flutter3.24.3-windows-x64 | OpenJDK 24 | 3.24.3 | 34.0.0 | windows-x64 | 2.56GB |
+| jdk17-android33-flutter3.24.3 | OpenJDK 17 | 3.24.3 | 34.0.0 | None | 2.58GB |
+| jdk17-android33-flutter3.24.3-full | OpenJDK 17 | 3.24.3 | 34.0.0 | All platforms | 2.58GB |
+| jdk17-android33-flutter3.24.3-android-arm | OpenJDK 17 | 3.24.3 | 34.0.0 | android-arm | 2.58GB |
+| jdk17-android33-flutter3.24.3-android-arm64 | OpenJDK 17 | 3.24.3 | 34.0.0 | android-arm64 | 2.58GB |
+| jdk17-android33-flutter3.24.3-android-x64 | OpenJDK 17 | 3.24.3 | 34.0.0 | android-x64 | 2.58GB |
+| jdk17-android33-flutter3.24.3-linux-x64 | OpenJDK 17 | 3.24.3 | 34.0.0 | linux-x64 | 2.58GB |
+| jdk17-android33-flutter3.24.3-darwin-x64 | OpenJDK 17 | 3.24.3 | 34.0.0 | darwin-x64 | 2.58GB |
+| jdk17-android33-flutter3.24.3-windows-x64 | OpenJDK 17 | 3.24.3 | 34.0.0 | windows-x64 | 2.58GB |
 
 All images share the same base configuration but differ in included platform-specific artifacts:
 - Base image (latest): Minimal setup with no platform artifacts
@@ -102,3 +98,7 @@ All images share the same base configuration but differ in included platform-spe
 - Platform-specific (-android-arm, -android-arm64, etc.): Include only specific platform artifacts
 
 Images are automatically built and pushed to Docker Hub via GitHub Actions when changes are made to the main branch.
+
+## License
+
+This Docker image is maintained by **Jules Reynaud**. For any issues or contributions, feel free to reach out here : docker-hub-android-s.handled958@passmail.net.
